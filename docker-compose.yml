@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  meetime-hubspot:
+    image: meetime-hubspot
+    container_name: meetime-hubspot
+    ports:
+      - "8080:8080"
+    environment:
+      HUBSPOT_CLIENT_ID: "<seu_client_id>"
+      HUBSPOT_CLIENT_SECRET: "<seu_client_secret>"
+      HUBSPOT_REDIRECT_URI: "http://localhost:8080/v1/oauth/callback"
+    restart: unless-stopped

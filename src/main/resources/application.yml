@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: meetime-hubspot
+
+hubspot:
+  client-id: ${HUBSPOT_CLIENT_ID}
+  client-secret: ${HUBSPOT_CLIENT_SECRET}
+  api-uri: ${HUBSPOT_API_URI:https://api.hubapi.com}
+  redirect-uri: ${HUBSPOT_REDIRECT_URI:http://localhost:8080/v1/oauth/callback}
+  token-endpoint: ${HUBSPOT_TOKEN_ENDPOINT:/oauth/v1/token}
+  auth-uri: ${HUBSPOT_AUTH_URI:https://app.hubspot.com/oauth/authorize}
+  contact-uri: ${HUBSPOT_CONTACT_URI:/crm/v3/objects/contacts}
+  rate-limit:
+    requests: 110
+    interval: 10
